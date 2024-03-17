@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title text-center mb-4">Sign Up</h3>
+          <form>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Email Address"
+                [(ngModel)]="userEmail"
+                name="userEmail" 
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                [(ngModel)]="userPwd"
+                name="userPwd" 
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <button
+                type="button"
+                class="btn btn-primary btn-block btn-signup"
+                (click)="signUp()"
+              >
+                Sign Up
+              </button>
+            </div>
+          </form>
+          <hr class="my-4" />
+          <div class="text-center">
+            <p>Already have an account?</p>
+            <a routerLink="/sign-in" class="btn btn-link btn-login">Log In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

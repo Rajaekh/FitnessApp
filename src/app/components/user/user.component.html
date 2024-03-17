@@ -1,0 +1,46 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav me-auto mb-2 mb-lg-0">
+        </div>
+        <form class="d-flex" #form="" (ngSubmit)="searchUser()">
+        <input type="text" class="form-control me-2" placeholder="User " name="gsm" required aria-label="Search">
+          <button type="submit" class="btn btn-warning" style="border-color:#2391ec; color:white;background-color: #2391ec;"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+    <div class="table-responsive">
+        <table class="table border mb-0 table-hover" style="max-width:100%;">
+          <thead class="table-light fw-semibold">
+            <tr class="align-middle">
+              <th>Email</th>
+              <th>FirstName</th>
+             
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let use of users">
+              <td>{{ use.email }}</td>
+              <td>{{ use.displayName}}</td>
+             
+              <td>
+                <a class="btn btn-sm" style="background-color: white;color: #0F7490; font-size: 10px;" [routerLink]="['/dashboard/edituser', use.uid]">
+                    <span style="color: rgb(102, 232, 102); text-decoration: underline;">Edit</span>  
+                </a>
+                <a class="btn btn-sm" style="background-color: white;color: hsl(6, 92%, 61%); font-size: 10px;" (click)="deleteUser(use.uid)">
+                    <span style="color: rgb(232, 44, 11); text-decoration: underline;">Delete</span>  
+                </a>
+            </td>
+            
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+  <div class="pagination">
+  </div>
+  
+  

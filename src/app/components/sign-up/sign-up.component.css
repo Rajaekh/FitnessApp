@@ -1,0 +1,25 @@
+/* Couleurs personnalisées */
+.card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+  }
+  
+  .btn-signup {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-login {
+    color: #007bff;
+  }
+  
+  /* Animation de survol */
+  .btn-signup:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .btn-login:hover {
+    color: #0056b3;
+  }
+  
