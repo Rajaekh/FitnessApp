@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from '../../shared/models/product';
 
 @Component({
   selector: 'app-editproduct',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './editproduct.component.css'
 })
 export class EditproductComponent {
-
+  product: Product = {
+    id: null,
+    Name: '',
+    price: null,
+    description: '',
+    image: '',
+    date: undefined
+  };
+  onSubmit(){
+    
+  }
 }

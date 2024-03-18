@@ -11,6 +11,7 @@ import { UserComponent } from './components/user/user.component';
 import { HomeComponent } from './components/home/home.component';
 import { EditUserComponent } from './components/edituser/edituser.component';
 import { ProductComponent } from './components/product/product.component';
+import { EditproductComponent } from './components/editproduct/editproduct.component';
 
 const routes: Routes = [
   
@@ -24,8 +25,9 @@ const routes: Routes = [
     { path: '', redirectTo: 'overview', pathMatch: 'full' }, // Default child route
     { path: 'users', component: UserComponent }, // Child route for overview component
     // Add more child routes here as needed
-    { path: 'edituser/:id', component:EditUserComponent},
-    { path: 'product', component:ProductComponent},
+    { path: 'edituser/:id', component:EditUserComponent,canActivate:[AuthGuard]},
+    { path: 'product', component:ProductComponent,canActivate:[AuthGuard]},
+    { path: 'editproduct/:id', component:EditproductComponent,canActivate:[AuthGuard]}
   ]},
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
