@@ -45,6 +45,8 @@ export class AuthService {
       })
       .catch((error) => {
         window.alert(error.message);
+        console.log("error");
+        this.router.navigate(['dashboard']);
       });
   }
   // Sign up with email/password

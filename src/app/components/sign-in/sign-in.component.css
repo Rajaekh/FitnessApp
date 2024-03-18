@@ -1,4 +1,8 @@
 /* Styles pour le formulaire de connexion */
+body{
+  background-color: #0b14c7c2;
+}
+
 .card {
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;

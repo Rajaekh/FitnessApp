@@ -1,0 +1,31 @@
+<div class="table-responsive">
+  <table class="table border mb-0 table-hover" style="max-width:100%;">
+    <thead class="table-light fw-semibold">
+      <tr class="align-middle">
+        <th>Name</th>
+        <th>Price (DH)</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.Name }}</td>
+        <td>{{ product.price }}</td> <!-- Utilisation du pipe dhPrice pour formater le prix -->
+        <td>{{ product.description }}</td>
+        <td>
+          <img [src]="product.image" alt="{{ product.Name }}" width="50" height="50" style="border-radius: 50%;">
+        </td>
+        <td>
+          <a class="btn btn-sm" style="background-color: white;color: #0F7490; font-size: 10px;" [routerLink]="['/dashboard/edituser', product.id]">
+              <span style="color: rgb(102, 232, 102); text-decoration: underline;">Edit</span>  
+          </a>
+          <a class="btn btn-sm" style="background-color: white;color: hsl(6, 92%, 61%); font-size: 10px;" (click)="deleteUser(product.id)">
+              <span style="color: rgb(232, 44, 11); text-decoration: underline;">Delete</span>  
+          </a>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

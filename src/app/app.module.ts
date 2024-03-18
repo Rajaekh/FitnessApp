@@ -20,6 +20,8 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { UserComponent } from './components/user/user.component';
 import { HomeComponent } from './components/home/home.component';
 import { EditUserComponent } from './components/edituser/edituser.component';
+import { ProductComponent } from './components/product/product.component';
+import { EditproductComponent } from './components/editproduct/editproduct.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { EditUserComponent } from './components/edituser/edituser.component';
     VerifyEmailComponent,
     UserComponent,
     HomeComponent,
-    EditUserComponent
+    EditUserComponent,
+    ProductComponent,
+    EditproductComponent
   ],
   exports: [RouterModule],
   imports: [
